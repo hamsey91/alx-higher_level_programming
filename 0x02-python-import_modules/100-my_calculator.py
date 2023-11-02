@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from sys import argv
+    import sys
     from calculator_1 import add, sub, mul, div
-    argc = len(argv)
+    argc = len(sys.argv)
     if argc != 4:
         print('Usage: {} <a> <operator> <b>'.format(argv[0]))
         exit(1)
@@ -20,4 +20,3 @@ if __name__ == "__main__":
     else:
         print('Unknown operator. Available operators: +, -, * and /')
         exit(1)
-    exit(0)
