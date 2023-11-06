@@ -9,5 +9,5 @@ def print_matrix_integer(matrix=[[]]):
                     end_space = ' '
                 else:
                     end_space = ''
-                print("{:d}".format(matrix[row][item]), end = end_space)
+                print("{:d}".format(matrix[row][item]), end=end_space)
             print()
