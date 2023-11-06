@@ -23,11 +23,11 @@ listint_t *add_nodeint_start(listint_t **head, const int n)
 }
 
 /**
- *is_palindrome - function that checks if a singly linked list is a palindrome.
+ * is_palindrome - function that checks if a singly linked list is a palindrome.
  *
- *@head: pointer to pointer of first node of listint_t list
+ * @head: pointer to pointer of first node of listint_t list
  *
- *Return: 0 if it is not a palindrome, 1 if it is a palindrome
+ * Return: 0 if it is not a palindrome, 1 if it is a palindrome
 */
 
 int is_palindrome(listint_t **head)
@@ -39,7 +39,7 @@ int is_palindrome(listint_t **head)
 		return (1);
 	while (n_head != NULL)
 	{
-		add_nodeint(&rev_list, n_head->n);
+		add_nodeint_start(&rev_list, n_head->n);
 		n_head = n_head->next;
 	}
 	rev_ptr = rev_list;
