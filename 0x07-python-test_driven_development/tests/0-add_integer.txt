@@ -1,17 +1,11 @@
-The ``0-add_integer`` module
-============================
-
-Using ``add_integer``
----------------------
-
 Import function from module:
 
     >>> add_integer = __import__('0-add_integer').add_integer
 
 Test one int argument:
 
-    >>> add_integer(2)
-    100
+    >>> add_integer(9)
+    107
 
 Test one int argument and check default second:
 
@@ -20,18 +14,18 @@ Test one int argument and check default second:
 
 Test one float:
 
-    >>> add_integer(123.9)
-    221
+    >>> add_integer(102.9)
+    200
 
 Test one negative float:
 
-    >>> add_integer(-95.5)
-    3
+    >>> add_integer(-86.5)
+    12
 
 Test two integers:
 
-    >>> add_integer(10, 5)
-    15
+    >>> add_integer(10, 2)
+    12
 
 Test two big integers:
 
