@@ -1,0 +1,129 @@
+Import module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test no delimiters:
+    >>> text_indentation("Python programming")
+    Python programming
+
+Test string then spaces:
+    >>> text_indentation("programming          ")
+    programming
+
+Test spaces then string:
+    >>> text_indentation("        programming")
+    programming
+    
+Test string between 2 spaces:
+    >>> text_indentation("        programming          ")
+    programming
+    
+Test string with empty string:
+    >>> text_indentation("")
+
+Test string with space string:
+    >>> text_indentation("      ")
+
+Test with 1 delimiters:
+    >>> text_indentation("Python: programming")
+    Python:
+    <BLANKLINE>
+    programming
+
+Test delimiters with spaces:
+    >>> text_indentation("      ?:  :  ")
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test newline:
+    >>> text_indentation("\n")
+    <BLANKLINE>
+
+Test two newline:
+    >>> text_indentation("\n\n")
+    <BLANKLINE>
+    <BLANKLINE>
+
+Test str and 2 newline:
+    >>> text_indentation("Python\n\n")
+    Python
+    <BLANKLINE>
+
+Test all delimeters:
+    >>> text_indentation("Python: programming? language. fooo")
+    Python:
+    <BLANKLINE>
+    programming?
+    <BLANKLINE>
+    language.
+    <BLANKLINE>
+    fooo
+
+Test all delimeters with spaces:
+    >>> text_indentation("Python   :     programming    ?    language.    fooo")
+    Python:
+    <BLANKLINE>
+    programming?
+    <BLANKLINE>
+    language.
+    <BLANKLINE>
+    fooo
+
+Test all delimeters with spaces at end:
+    >>> text_indentation("Python   :     programming    ?    language.    fooo     ")
+    Python:
+    <BLANKLINE>
+    programming?
+    <BLANKLINE>
+    language.
+    <BLANKLINE>
+    fooo
+
+Test delimeters:
+    >>> text_indentation(".?:")
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test just delimeters 2:
+    >>> text_indentation("     ?   ")
+    ?
+    <BLANKLINE>
+
+Test delimeters between text:
+    >>> text_indentation("?Python.")
+    ?
+    <BLANKLINE>
+    Python.
+    <BLANKLINE>
+
+Test newlines with delimiters:
+    >>> text_indentation("?\n\n.\n\n:")
+    ?
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test None:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Test number:
+    >>> text_indentation(33)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
