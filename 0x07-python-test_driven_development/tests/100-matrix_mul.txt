@@ -1,0 +1,100 @@
+Import module:
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Test mult 2 matrices1:
+    >>> matrix_mul([[1, 2, 3], [3, 4, 5]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a and m_b can't be multiplied
+
+Test mult 2 matrices2:
+    >>> matrix_mul([[1, 2], [3, 4], [3, 4]], [[5, 6, 1], [7, 8, 2]])
+    [[19, 22, 5], [43, 50, 11], [43, 50, 11]]
+
+Test empty single matrix a:
+    >>> matrix_mul([], [[3]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a can't be empty
+
+Test empty double matrix a:
+    >>> matrix_mul([[]], [[3]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a can't be empty
+
+Test empty single matrix b:
+    >>> matrix_mul([[4]], [])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_b can't be empty
+
+Test empty double matrix b:
+    >>> matrix_mul([[3]], [[]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_b can't be empty
+
+Test with single matrices:
+    >>> matrix_mul([[3]], [[9]])
+    [[27]]
+
+Test str argument a:
+    >>> matrix_mul("aaa", [[2]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list
+
+Test str argument b:
+    >>> matrix_mul([[6]], "bbb")
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b must be a list
+
+Test integer list a:
+    >>> matrix_mul([1, 3, 4], [[9]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list of lists
+
+Test integer list b:
+    >>> matrix_mul([[6]], [2, 4, 6])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b must be a list of lists
+
+Test not number list a:
+    >>> matrix_mul([["aaa"]], [[3, 5, 7]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a should contain only integers or floats
+
+Test not number list b:
+    >>> matrix_mul([[2, 4, 6]], [["bbb"]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b should contain only integers or floats
+
+Test incompatible rows a:
+    >>> matrix_mul([[3, 5], [3, 4, 5], [3, 4]], [[5, 3, 1], [9, 8, 2]])
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_a must should be of the same size
+
+Test incompatible roxs b:
+    >>> matrix_mul([[1, 9], [1, 4], [3, 1]], [[5, 6, 1], [7, 2]])
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_b must should be of the same size
+
+Test no argument a:
+    >>> matrix_mul([[3]])
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+Test no argument b:
+    >>> matrix_mul()
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
