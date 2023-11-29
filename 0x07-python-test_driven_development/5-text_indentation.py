@@ -1,28 +1,25 @@
-#!usr/bin/python3
-"""defines a  function that prints a text"""
+#!/usr/bin/python3
+"""Defines module for text_indentation."""
 
 
 def text_indentation(text):
-    """Prints a text with 2 new lines after each of
-    these characters: '.', '?' and ':'.
+    """Functcion to addi 2 newlines after '.?:' chars.
 
     Args:
-        text: the size length of the square.
+        text: The text string.
 
     Raises:
-        TypeError: text must be a string.
+        TypeError: text is not a string.
     """
     if not isinstance(text, str):
-        raise TypeError('text must be a string')
+        raise TypeError("text must be a string")
 
-    for d in ".?:":
-        text = (d + "\n\n").join(
-            [line.strip(" ") for line in text.split(d)])
+    for delimiters in ".?:":
+        text = (delimiters + "\n\n").join(
+            [line.strip(" ") for line in text.split(delimiters)])
 
     print(text, end="")
 
-
 if __name__ == "__main__":
     import doctest
-
     doctest.testfile("tests/5-text_indentation.txt")
