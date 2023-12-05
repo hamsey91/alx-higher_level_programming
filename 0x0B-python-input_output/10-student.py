@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """Defines the Student class."""
 
 
@@ -9,8 +8,8 @@ class Student:
         """Initialize Student.
 
         Args:
-            first_name : student first name.
-            last_name : student last name.
+            first_name (str): student first name.
+            last_name (str): student last name.
             age (int): student age.
         """
         self.first_name = first_name
@@ -23,7 +22,6 @@ class Student:
         If attrs is a list of strings, only attribute names contained in
         this list must be retrieved.Otherwise, all attributes must be retrieved.
         """
-        if (type(attrs) == list and
-                all(type(ele) == str for ele in attrs)):
-            return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
-        return self.__dict__
+        if list == type(attrs) and all(type(ele) == str for ele in attrs):
+            return self.__dict__
+        return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
