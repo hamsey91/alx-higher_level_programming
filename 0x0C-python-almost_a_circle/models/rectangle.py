@@ -4,10 +4,10 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """A Rectangle class."""
+    """Represents a rectangle class."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialize the Rectangle.
+        """Constructor of Rectangle.
 
         Args:
             width (int): the rectangle width.
@@ -15,12 +15,12 @@ class Rectangle(Base):
             x (int): The horizontal axis x  of rectangle.
             y (int): The vertical axis y of rectangle.
             id (int): The identity of the rectangle.
-
+            
         Raises:
-            TypeError: If width or height is not an int.
-            ValueError: If width or height <= 0.
-            TypeError: If x or y is not an int.
-            ValueError: If of x or y < 0.
+            TypeError: When width or height is not an int.
+            ValueError: When width or height <= 0.
+            TypeError: When x or y is not an int.
+            ValueError: When of x or y < 0.
         """
         super().__init__(id)
         self.width = width
@@ -35,7 +35,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-	if type(value) != int:
+        if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -56,7 +56,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """getter/setter for axis x of this rectangle."""
+        """getter/setter for axis y of this rectangle."""
         return self.__x
 
     @x.setter
