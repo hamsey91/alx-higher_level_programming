@@ -7,6 +7,7 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """Constructor.
+
         Args:
             size (int): The square size.
             x (int): the horizontal axis x of square.
@@ -38,6 +39,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Updates instance attributes via no-keyword & keyword args.
+
         Args:
             *args (ints): The attribute values:
                 - 1st argument represents id attribute
@@ -61,6 +63,6 @@ class Square(Rectangle):
         }
 
     def __str__(self):
-        '''Returns string info about this square.'''
+        """Returns rectangle information in string type."""
         return '[{}] ({}) {}/{} - {}'.\
             format(type(self).__name__, self.id, self.x, self.y, self.width)
