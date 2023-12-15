@@ -113,4 +113,4 @@ class Rectangle(Base):
         if args:
             self.__update(*args)
         elif kwargs:
-            self.__update(**kwargs
+            self.__update(**kwargs)
