@@ -95,7 +95,7 @@ class Rectangle(Base):
             format(type(self).__name__, self.id, self.x, self.y, self.width,
                    self.height)
 
-    def __update(self, id=None, width=None, height=None, x=None, y=None):
+    def f_update(self, id=None, width=None, height=None, x=None, y=None):
         """Method that assigns an argument to each attribute."""
         if id is not None:
             self.id = id
@@ -121,6 +121,6 @@ class Rectangle(Base):
             **kwargs (dict): The double pointer to a dictionary key/value.
         """
         if args:
-            self.__update(*args)
+            self.f_update(*args)
         elif kwargs:
-            self.__update(**kwargs)
+            self.f_update(**kwargs)
