@@ -51,7 +51,7 @@ class Base:
 
         Args:
             json_string (str): a string representing a list of dictionaries.
-	"""
+        """
         if json_string is None or not json_string:
             return []
         return loads(json_string)
