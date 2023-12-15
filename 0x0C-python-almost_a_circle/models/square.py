@@ -25,7 +25,7 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-    def __update(self, id=None, size=None, x=None, y=None):
+    def f_update(self, id=None, size=None, x=None, y=None):
         '''Internal method that updates instance attributes via */**args.'''
         if id is not None:
             self.id = id
@@ -39,9 +39,9 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         '''Updates instance attributes via no-keyword & keyword args.'''
         if args:
-            self.__update(*args)
+            self.f_update(*args)
         elif kwargs:
-            self.__update(**kwargs)
+            self.f_update(**kwargs)
 
     def to_dictionary(self):
         '''Returns dictionary representation of this class.'''
