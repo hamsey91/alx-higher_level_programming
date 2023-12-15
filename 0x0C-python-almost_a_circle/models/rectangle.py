@@ -7,7 +7,7 @@ class Rectangle(Base):
     """A Rectangle class."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialize a new Rectangle.
+        """Initialize the Rectangle.
 
         Args:
             width (int): the rectangle width.
@@ -16,6 +16,12 @@ class Rectangle(Base):
             y (int): The vertical axis y of rectangle.
             id (int): The identity of the rectangle.
         """
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+
     @property
     def width(self):
         """getter/setter for width of this rectangle."""
