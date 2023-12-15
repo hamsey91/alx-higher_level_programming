@@ -120,6 +120,6 @@ class Rectangle(Base):
             **kwargs (dict): The double pointer to a dictionary key/value.
         """
         if args:
-            self.__update(*args)
+            self.first_update(*args)
         elif kwargs:
-            self.__update(**kwargs
+            self.first_update(**kwargs)
