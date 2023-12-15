@@ -95,8 +95,8 @@ class Rectangle(Base):
             format(type(self).__name__, self.id, self.x, self.y, self.width,
                    self.height)
 
-    def first_update(self, id=None, width=None, height=None, x=None, y=None):
-        """Method that assigns an argument to each attribute."""
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        '''Internal method that updates instance attributes via */**args.'''
         if id is not None:
             self.id = id
         if width is not None:
@@ -109,17 +109,8 @@ class Rectangle(Base):
             self.y = y
 
     def update(self, *args, **kwargs):
-        """Updates instance attributes via no-keyword & keyword args.
-	Args:
-            *args (ints): The attribute values:
-                - 1st argument represents id attribute
-                - 2nd argument represents width attribute
-                - 3rd argument represent height attribute
-                - 4th argument represents x attribute
-                - 5th argument represents y attribute
-            **kwargs (dict): The double pointer to a dictionary key/value.
-        """
+        '''Updates instance attributes via no-keyword & keyword args.'''
         if args:
-            self.first_update(*args)
+            self.__update(*args)
         elif kwargs:
-            self.first_update(**kwargs)
+            self.__update(**kwargs
