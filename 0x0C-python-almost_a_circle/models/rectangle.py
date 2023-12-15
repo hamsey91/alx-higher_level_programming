@@ -124,3 +124,13 @@ class Rectangle(Base):
             self.f_update(*args)
         elif kwargs:
             self.f_update(**kwargs)
+
+    def to_dictionary(self):
+        """Method for the dictionary representation of a rectangle."""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
