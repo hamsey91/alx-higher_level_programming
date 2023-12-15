@@ -24,7 +24,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns the JSON string representation of list_dictionaries.
-	Args:
+        Args:
             list_dictionaries (list): a list of dictionaries.
         """
         if list_dictionaries is None or not list_dictionaries:
@@ -35,7 +35,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """Writes the JSON string representation of list_objs to a file.
-	 Args:
+        Args:
             list_objs (list): a list of instances who inherited of Base.
         """
         if list_objs is not None:
@@ -46,7 +46,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """Returns the list of the JSON string representation json_string.
-	Args:
+        Args:
             json_string (str): a string representing a list of dictionaries.
 	"""
         if json_string is None or not json_string:
@@ -56,7 +56,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set.
-	Args:
+        Args:
             **dictionary (dict): double pointer to a dictionary.
         """
         from models.rectangle import Rectangle
