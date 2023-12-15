@@ -15,6 +15,12 @@ class Rectangle(Base):
             x (int): The horizontal axis x  of rectangle.
             y (int): The vertical axis y of rectangle.
             id (int): The identity of the rectangle.
+
+        Raises:
+            TypeError: If width or height is not an int.
+            ValueError: If width or height <= 0.
+            TypeError: If x or y is not an int.
+            ValueError: If of x or y < 0.
         """
         super().__init__(id)
         self.width = width
