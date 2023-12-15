@@ -14,8 +14,7 @@ class Rectangle(Base):
             height (int): the rectangle height.
             x (int): The horizontal axis x  of rectangle.
             y (int): The vertical axis y of rectangle.
-            id (int): The identity of the rectangle.
-            
+            id (int): The identity of the rectangle.            
         Raises:
             TypeError: When width or height is not an int.
             ValueError: When width or height <= 0.
@@ -56,7 +55,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """getter/setter for axis y of this rectangle."""
+        """getter/setter for axis x of this rectangle."""
         return self.__x
 
     @x.setter
