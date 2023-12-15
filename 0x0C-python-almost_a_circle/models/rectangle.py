@@ -1,20 +1,20 @@
 #!/usr/bin/python3
-"""Defines a rectangle class."""
+"""Defines a rectangle class module."""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Represent a rectangle."""
+    """Represents a rectangle class."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialize a new Rectangle.
+        """Constructor.
 
         Args:
-            width (int): The width of the new Rectangle.
-            height (int): The height of the new Rectangle.
-            x (int): The x coordinate of the new Rectangle.
-            y (int): The y coordinate of the new Rectangle.
-            id (int): The identity of the new Rectangle.
+            width (int): the rectangle width.
+            height (int): the rectangle height.
+            x (int): the horizontal axis x of rectangle.
+            y (int): the vertical axis y of rectangle.
+            id (int): the identity of the rectangle.
         Raises:
             TypeError: If either of width or height is not an int.
             ValueError: If either of width or height <= 0.
@@ -29,7 +29,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Set/get the width of the Rectangle."""
+        """Getter/setter for width of the rectangle."""
         return self.__width
 
     @width.setter
@@ -42,7 +42,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Set/get the height of the Rectangle."""
+        """Getter/Setter for height of the rectangle."""
         return self.__height
 
     @height.setter
@@ -55,7 +55,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Set/get the x coordinate of the Rectangle."""
+        """Getter/Setter for the axis x of the rectangle."""
         return self.__x
 
     @x.setter
@@ -68,7 +68,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Set/get the y coordinate of the Rectangle."""
+        """Getter/Setter for the axis y of the rectangle."""
         return self.__y
 
     @y.setter
