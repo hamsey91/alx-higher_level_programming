@@ -1,35 +1,35 @@
 #!/usr/bin/python3
-"""Defines a rectangle class module."""
+"""Defines a rectangle class."""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Represents a rectangle class."""
+    """Represent a rectangle."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Constructor of Rectangle.
+        """Initialize a new Rectangle.
 
         Args:
-            width (int): the rectangle width.
-            height (int): the rectangle height.
-            x (int): The horizontal axis x  of rectangle.
-            y (int): The vertical axis y of rectangle.
-            id (int): The identity of the rectangle.            
+            width (int): The width of the new Rectangle.
+            height (int): The height of the new Rectangle.
+            x (int): The x coordinate of the new Rectangle.
+            y (int): The y coordinate of the new Rectangle.
+            id (int): The identity of the new Rectangle.
         Raises:
-            TypeError: When width or height is not an int.
-            ValueError: When width or height <= 0.
-            TypeError: When x or y is not an int.
-            ValueError: When of x or y < 0.
+            TypeError: If either of width or height is not an int.
+            ValueError: If either of width or height <= 0.
+            TypeError: If either of x or y is not an int.
+            ValueError: If either of x or y < 0.
         """
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
-        """getter/setter for width of this rectangle."""
+        """Set/get the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -42,7 +42,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """getter/setter for height of this rectangle."""
+        """Set/get the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -55,7 +55,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """getter/setter for axis x of this rectangle."""
+        """Set/get the x coordinate of the Rectangle."""
         return self.__x
 
     @x.setter
@@ -68,7 +68,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """getter/setter for axis y of this rectangle."""
+        """Set/get the y coordinate of the Rectangle."""
         return self.__y
 
     @y.setter
