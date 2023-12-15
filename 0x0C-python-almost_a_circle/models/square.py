@@ -4,10 +4,10 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """Represents a square class."""
 
     def __init__(self, size, x=0, y=0, id=None):
         """Constructor.
-
         Args:
             size (int): The square size.
             x (int): the horizontal axis x of square.
@@ -54,16 +54,16 @@ class Square(Rectangle):
         elif kwargs:
             self.f_update(**kwargs)
 
-    def to_dictionary(self):
-        """Method for the dictionary representation of a square."""
-        return {
-            "id": self.id,
-            "size": self.width,
-            "x": self.x,
-            "y": self.y
-        }
+        def to_dictionary(self):
+            """Method for the dictionary representation of a square."""
+            return {
+                "id": self.id,
+                "size": self.width,
+                "x": self.x,
+                "y": self.y
+            }
 
-    def __str__(self):
-        """Returns rectangle information in string type."""
-        return '[{}] ({}) {}/{} - {}'.\
-            format(type(self).__name__, self.id, self.x, self.y, self.width)
+        def __str__(self):
+            """Returns rectangle information in string type."""
+            return '[{}] ({}) {}/{} - {}'. \
+                format(type(self).__name__, self.id, self.x, self.y, self.width)
