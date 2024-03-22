@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Prints the State with the name from the database hbtn_0e_6_usa"""
+"""Search a State name from the database hbtn_0e_6_usa"""
 import sys
 from model_state import State
 from sqlalchemy import (create_engine)

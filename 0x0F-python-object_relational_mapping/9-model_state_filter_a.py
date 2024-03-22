@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Prints first State objects from the database hbtn_0e_6_usa"""
+"""Prints State objects with a from the database hbtn_0e_6_usa"""
 import sys
 from model_state import State
 from sqlalchemy import (create_engine)
