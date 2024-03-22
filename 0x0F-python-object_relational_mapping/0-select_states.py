@@ -3,7 +3,8 @@
 import sys
 import MySQLdb
 
-def list_states (username, password, database):
+
+def list_states(username, password, database):
     """Function that lists all states from the database hbtn_0e_0_usa.
     Aguments:
         username: mysql username
@@ -23,6 +24,7 @@ def list_states (username, password, database):
 
     db.close()
 
+
 if __name__ == '__main__':
 
     username = sys.argv[1]
@@ -30,4 +32,3 @@ if __name__ == '__main__':
     database = sys.argv[3]
 
     list_states(username, password, database)
-
