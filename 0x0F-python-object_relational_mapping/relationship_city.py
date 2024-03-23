@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Contains the class definition of a City and an instance Base"""
+"""Defines the City model representing a city."""
 
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
@@ -8,7 +8,7 @@ Base = declarative_base()
 
 
 class City(Base):
-    """Defines a City class."""
+    """Represents a city for a MySQL database."""
     __tablename__ = "cities"
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
