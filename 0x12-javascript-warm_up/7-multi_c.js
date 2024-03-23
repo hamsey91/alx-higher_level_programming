@@ -7,6 +7,6 @@ if (process.argv[2] === undefined || isNaN(process.argv[2])) {
   let index = 0;
   while (index < x) {
     console.log('C is fun');
-    index++
+    index++;
   }
 }
