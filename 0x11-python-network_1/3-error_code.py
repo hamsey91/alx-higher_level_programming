@@ -3,8 +3,7 @@
 Script that sends a  request to URL,displays the body of the response
 """
 import sys
-import urllib.request
-import urllib.error
+from urllib import request, error
 
 
 if __name__ == '__main__':
