@@ -13,5 +13,5 @@ if __name__ == '__main__':
     password = argv[2]
 
     request_url = "https://api.github.com/user"
-    response = get(request_url, Auth=(username, password))
+    response = get(request_url, auth=(username, password))
     print(response.json().get('id'))
