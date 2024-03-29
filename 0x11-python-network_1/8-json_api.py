@@ -3,8 +3,8 @@
 Script that sends a request to the URL,
 and displays the body of the response.
 """
-import sys
-import requests
+from requests import post
+from sys import argv
 
 
 if __name__ == "__main__":
