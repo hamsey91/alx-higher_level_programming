@@ -11,7 +11,7 @@ req(Url, function (err, res, body) {
     }
   });
   
-  function printallcharacters (actors, count) {
+function printallcharacters (actors, count) {
     req(actors[count], function (err, res, body) {
       if (!err) {
         console.log(JSON.parse(body).name);
@@ -20,4 +20,4 @@ req(Url, function (err, res, body) {
         }
       }
     });
-  }
+}
