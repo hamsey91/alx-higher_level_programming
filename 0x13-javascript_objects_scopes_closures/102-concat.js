@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const { readFileSunc, writeFile } = require('fs');
+const { readFileSync, writeFile } = require('fs');
 const { argv } = require('process');
 
 const readContent = (file) => {
